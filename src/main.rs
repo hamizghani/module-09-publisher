@@ -24,35 +24,35 @@ fn main() {
         "user_created".to_owned(),
         UserCreatedEventMessage {
             user_id: "1".to_owned(),
-            user_name: "HamizGhani-Amir".to_owned(),
+            user_name: "2406360413-Amir".to_owned(),
         },
     );
     _ = publisher.publish_event(
         "user_created".to_owned(),
         UserCreatedEventMessage {
             user_id: "2".to_owned(),
-            user_name: "HamizGhani-Budi".to_owned(),
+            user_name: "2406360413-Budi".to_owned(),
         },
     );
     _ = publisher.publish_event(
         "user_created".to_owned(),
         UserCreatedEventMessage {
             user_id: "3".to_owned(),
-            user_name: "HamizGhani-Cica".to_owned(),
+            user_name: "2406360413-Cica".to_owned(),
         },
     );
     _ = publisher.publish_event(
         "user_created".to_owned(),
         UserCreatedEventMessage {
             user_id: "4".to_owned(),
-            user_name: "HamizGhani-Dira".to_owned(),
+            user_name: "2406360413-Dira".to_owned(),
         },
     );
     _ = publisher.publish_event(
         "user_created".to_owned(),
         UserCreatedEventMessage {
             user_id: "5".to_owned(),
-            user_name: "HamizGhani-Emir".to_owned(),
+            user_name: "2406360413-Emir".to_owned(),
         },
     );
 }
