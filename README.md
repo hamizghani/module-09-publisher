@@ -13,3 +13,9 @@ The URL `amqp://guest:guest@localhost:5672` is the same as the one used by the s
 Screenshot: add the RabbitMQ management dashboard screenshot here after running RabbitMQ locally.
 
 RabbitMQ acts as the message broker between the publisher and the subscriber. The publisher does not need to know which subscriber will process the event, because it only sends messages to RabbitMQ. The subscriber also does not need to know when the publisher is executed, because it only waits for messages from the queue. The management dashboard helps verify that RabbitMQ is running and that the AMQP and HTTP management ports are exposed correctly. In the tutorial setup, the AMQP connection uses port `5672`, while the browser dashboard uses port `15672`. This setup makes it easier to observe connections, queues, and message rates while the programs are running.
+
+## Sending and Processing Event
+
+Screenshot: add the terminal screenshot showing publisher execution and subscriber output here.
+
+When the subscriber is running and the publisher is executed, the publisher sends five `UserCreatedEventMessage` events to RabbitMQ. RabbitMQ receives those events on the `user_created` queue and delivers them to the subscriber. The subscriber then prints each received message to the terminal. This proves that the publisher and subscriber are not communicating directly, but are coordinated through the message broker. If the subscriber is already connected before the publisher runs, the messages are usually consumed almost immediately. This behavior demonstrates the basic flow of event-driven architecture: produce an event, enqueue it, consume it, and process it.
